@@ -17,8 +17,6 @@ import com.crm.pageobjects.IndexPage;
 import com.crm.pageobjects.LoginPage;
 import com.crm.utility.TestUtil;
 
-import junit.framework.Assert;
-
 public class TC_ContactsPageTest_004 extends BaseClass {
 	
 	IndexPage indexpage;

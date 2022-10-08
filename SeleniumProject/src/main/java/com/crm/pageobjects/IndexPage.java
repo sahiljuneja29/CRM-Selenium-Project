@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.base.BaseClass;
 import com.src.ActionDriver.Action;
-
+	
 public class IndexPage extends BaseClass{
 	
 	@FindBy(linkText = "Login")

@@ -1,0 +1,3 @@
+****Jenkins*****
+1. To Start Jenkins using .war file:hit the command "java -jar jenkins.war" in command prompt
+2.

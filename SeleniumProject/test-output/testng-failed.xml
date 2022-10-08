@@ -5,16 +5,8 @@
     <listener class-name="com.crm.Analyzer.MyTransformer"/>
   </listeners>
   <test thread-count="5" name="Free CRM Testcases(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.crm.testcases.TC_IndexPageTest_002">
-        <methods>
-          <include name="verifyTitle"/>
-          <include name="verifyLogo"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="loadConfig"/>
-        </methods>
-      </class> <!-- com.crm.testcases.TC_IndexPageTest_002 -->
       <class name="com.crm.testcases.TC_ContactsPageTest_004">
         <methods>
           <include name="validateCreateNewContactTest"/>
@@ -37,10 +29,17 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="verifyLoginPagteTitle"/>
-          <include name="verifyLogin"/>
           <include name="loadConfig"/>
         </methods>
       </class> <!-- com.crm.testcases.TC_LoginTest_001 -->
+      <class name="com.crm.testcases.TC_IndexPageTest_002">
+        <methods>
+          <include name="verifyTitle"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.crm.testcases.TC_IndexPageTest_002 -->
     </classes>
   </test> <!-- Free CRM Testcases(failed) -->
 </suite> <!-- Failed suite [Free CRM Application Test Automation] -->

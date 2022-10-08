@@ -1,22 +1,15 @@
 package com.crm.testcases;
 
-import org.apache.logging.log4j.core.LoggerContext;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
+
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
-import com.beust.jcommander.Parameter;
 import com.crm.base.BaseClass;
 import com.crm.pageobjects.IndexPage;
-
-import junit.framework.Assert;
 
 public class TC_IndexPageTest_002 extends BaseClass{
 	
