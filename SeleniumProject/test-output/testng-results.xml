@@ -2,12 +2,12 @@
 <testng-results retried="1" ignored="3" total="13" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-09T01:46:19 IST" name="Free CRM Application Test Automation" finished-at="2022-10-09T01:49:12 IST" duration-ms="173070">
+  <suite started-at="2022-10-09T15:00:26 IST" name="Free CRM Application Test Automation" finished-at="2022-10-09T15:03:30 IST" duration-ms="183801">
     <groups>
     </groups>
-    <test started-at="2022-10-09T01:46:19 IST" name="Free CRM Testcases" finished-at="2022-10-09T01:49:12 IST" duration-ms="173070">
+    <test started-at="2022-10-09T15:00:26 IST" name="Free CRM Testcases" finished-at="2022-10-09T15:03:30 IST" duration-ms="183801">
       <class name="com.crm.testcases.TC_LoginTest_001">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.crm.testcases.TC_LoginTest_001@3a44431a]" started-at="2022-10-09T01:46:36 IST" name="setUp" finished-at="2022-10-09T01:46:51 IST" duration-ms="15419" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.crm.testcases.TC_LoginTest_001@3a44431a]" started-at="2022-10-09T15:01:32 IST" name="setUp" finished-at="2022-10-09T15:01:47 IST" duration-ms="15444" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,21 +18,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginPagteTitle()[pri:1, instance:com.crm.testcases.TC_LoginTest_001@3a44431a]" started-at="2022-10-09T01:46:51 IST" name="verifyLoginPagteTitle" finished-at="2022-10-09T01:47:00 IST" duration-ms="8780" status="PASS">
+        <test-method signature="verifyLoginPagteTitle()[pri:1, instance:com.crm.testcases.TC_LoginTest_001@3a44431a]" started-at="2022-10-09T15:01:47 IST" name="verifyLoginPagteTitle" finished-at="2022-10-09T15:01:52 IST" duration-ms="5415" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPagteTitle -->
-        <test-method signature="verifyLogin()[pri:2, instance:com.crm.testcases.TC_LoginTest_001@3a44431a]" started-at="2022-10-09T01:47:00 IST" name="verifyLogin" finished-at="2022-10-09T01:47:13 IST" duration-ms="13254" status="PASS">
+        <test-method signature="verifyLogin()[pri:2, instance:com.crm.testcases.TC_LoginTest_001@3a44431a]" started-at="2022-10-09T15:01:52 IST" name="verifyLogin" finished-at="2022-10-09T15:02:08 IST" duration-ms="15665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.testcases.TC_LoginTest_001@3a44431a]" started-at="2022-10-09T01:47:13 IST" name="tearDown" finished-at="2022-10-09T01:47:14 IST" duration-ms="400" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.testcases.TC_LoginTest_001@3a44431a]" started-at="2022-10-09T15:02:08 IST" name="tearDown" finished-at="2022-10-09T15:02:09 IST" duration-ms="668" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.crm.testcases.TC_LoginTest_001 -->
       <class name="com.crm.testcases.TC_SignUpTest_003">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.crm.testcases.TC_SignUpTest_003@3c7f66c4]" started-at="2022-10-09T01:47:14 IST" name="setUp" finished-at="2022-10-09T01:47:25 IST" duration-ms="11297" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.crm.testcases.TC_SignUpTest_003@3c7f66c4]" started-at="2022-10-09T15:02:09 IST" name="setUp" finished-at="2022-10-09T15:02:25 IST" duration-ms="16002" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,21 +43,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifySignupPageTitleTest()[pri:1, instance:com.crm.testcases.TC_SignUpTest_003@3c7f66c4]" started-at="2022-10-09T01:47:25 IST" name="verifySignupPageTitleTest" finished-at="2022-10-09T01:47:32 IST" duration-ms="7194" status="PASS">
+        <test-method signature="verifySignupPageTitleTest()[pri:1, instance:com.crm.testcases.TC_SignUpTest_003@3c7f66c4]" started-at="2022-10-09T15:02:25 IST" name="verifySignupPageTitleTest" finished-at="2022-10-09T15:02:31 IST" duration-ms="6096" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignupPageTitleTest -->
-        <test-method signature="verifysignUpTest()[pri:2, instance:com.crm.testcases.TC_SignUpTest_003@3c7f66c4]" started-at="2022-10-09T01:47:32 IST" name="verifysignUpTest" finished-at="2022-10-09T01:47:39 IST" duration-ms="7128" status="PASS">
+        <test-method signature="verifysignUpTest()[pri:2, instance:com.crm.testcases.TC_SignUpTest_003@3c7f66c4]" started-at="2022-10-09T15:02:31 IST" name="verifysignUpTest" finished-at="2022-10-09T15:02:36 IST" duration-ms="5381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifysignUpTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.testcases.TC_SignUpTest_003@3c7f66c4]" started-at="2022-10-09T01:47:39 IST" name="tearDown" finished-at="2022-10-09T01:47:41 IST" duration-ms="1106" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.testcases.TC_SignUpTest_003@3c7f66c4]" started-at="2022-10-09T15:02:36 IST" name="tearDown" finished-at="2022-10-09T15:02:37 IST" duration-ms="218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.crm.testcases.TC_SignUpTest_003 -->
       <class name="com.crm.testcases.TC_ContactsPageTest_004">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T01:47:41 IST" name="setUp" finished-at="2022-10-09T01:48:04 IST" duration-ms="23414" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T15:02:37 IST" name="setUp" finished-at="2022-10-09T15:02:50 IST" duration-ms="13883" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -68,7 +68,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateCreateNewContactTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T01:48:28 IST" name="validateCreateNewContactTest" data-provider="getTestData" finished-at="2022-10-09T01:48:41 IST" duration-ms="13359" status="PASS">
+        <test-method signature="validateCreateNewContactTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T15:02:58 IST" name="validateCreateNewContactTest" data-provider="getTestData" finished-at="2022-10-09T15:03:08 IST" duration-ms="10077" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -94,7 +94,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCreateNewContactTest -->
-        <test-method signature="validateCreateNewContactTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T01:48:41 IST" name="validateCreateNewContactTest" data-provider="getTestData" finished-at="2022-10-09T01:48:56 IST" duration-ms="15131" status="PASS">
+        <test-method signature="validateCreateNewContactTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T15:03:08 IST" name="validateCreateNewContactTest" data-provider="getTestData" finished-at="2022-10-09T15:03:18 IST" duration-ms="10786" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -120,7 +120,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCreateNewContactTest -->
-        <test-method signature="validateCreateNewContactTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T01:48:56 IST" name="validateCreateNewContactTest" data-provider="getTestData" finished-at="2022-10-09T01:49:10 IST" duration-ms="14033" status="PASS">
+        <test-method signature="validateCreateNewContactTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T15:03:18 IST" name="validateCreateNewContactTest" data-provider="getTestData" finished-at="2022-10-09T15:03:30 IST" duration-ms="11252" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -146,17 +146,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCreateNewContactTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T01:49:10 IST" name="tearDown" finished-at="2022-10-09T01:49:12 IST" duration-ms="1612" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.testcases.TC_ContactsPageTest_004@72e5a8e]" started-at="2022-10-09T15:03:30 IST" name="tearDown" finished-at="2022-10-09T15:03:30 IST" duration-ms="326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.crm.testcases.TC_ContactsPageTest_004 -->
       <class name="com.crm.testcases.TC_IndexPageTest_002">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T01:46:19 IST" name="loadConfig" finished-at="2022-10-09T01:46:19 IST" duration-ms="25" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T15:00:26 IST" name="loadConfig" finished-at="2022-10-09T15:00:26 IST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T01:46:19 IST" name="setUp" finished-at="2022-10-09T01:46:33 IST" duration-ms="14373" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T15:00:26 IST" name="setUp" finished-at="2022-10-09T15:01:27 IST" duration-ms="60789" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -167,11 +167,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLogo()[pri:1, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T01:46:33 IST" name="verifyLogo" finished-at="2022-10-09T01:46:34 IST" duration-ms="781" status="PASS">
+        <test-method signature="verifyLogo()[pri:1, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T15:01:27 IST" name="verifyLogo" finished-at="2022-10-09T15:01:31 IST" duration-ms="3780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogo -->
-        <test-method retried="true" signature="verifyTitle()[pri:2, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T01:46:34 IST" name="verifyTitle" finished-at="2022-10-09T01:46:34 IST" duration-ms="164" status="SKIP">
+        <test-method retried="true" signature="verifyTitle()[pri:2, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T15:01:31 IST" name="verifyTitle" finished-at="2022-10-09T15:01:31 IST" duration-ms="30" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Free CRM software for customer relationship management India expected [Free CRM software for customer relationship management India] but found [Indexpage title not matched]]]>
@@ -218,7 +218,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitle -->
-        <test-method signature="verifyTitle()[pri:2, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T01:46:34 IST" name="verifyTitle" finished-at="2022-10-09T01:46:34 IST" duration-ms="53" status="FAIL">
+        <test-method signature="verifyTitle()[pri:2, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T15:01:31 IST" name="verifyTitle" finished-at="2022-10-09T15:01:31 IST" duration-ms="13" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Free CRM software for customer relationship management India expected [Free CRM software for customer relationship management India] but found [Indexpage title not matched]]]>
@@ -265,7 +265,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T01:46:34 IST" name="tearDown" finished-at="2022-10-09T01:46:36 IST" duration-ms="1469" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.crm.testcases.TC_IndexPageTest_002@7c711375]" started-at="2022-10-09T15:01:31 IST" name="tearDown" finished-at="2022-10-09T15:01:32 IST" duration-ms="606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

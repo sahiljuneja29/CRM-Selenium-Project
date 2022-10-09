@@ -43,7 +43,8 @@ public class TC_IndexPageTest_002 extends BaseClass{
 		
 		String title=indexpage.getCrmTitle();
 		logger.info("Checking title of page:");
-		Assert.assertEquals("Indexpage title not matched","Free CRM software for customer relationship management India",title);
+		Assert.assertEquals(title,"Free CRM software for customer relationship management India","Indexpage title not matched");
+		
 	
 	}
 }

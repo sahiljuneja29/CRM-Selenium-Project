@@ -1,34 +1,21 @@
 package com.crm.base;
 
 import java.io.FileInputStream;
-
-
-
-
-
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
-import org.apache.logging.log4j.*;
-import org.apache.logging.log4j.core.config.ConfigurationFactory;
-import org.apache.logging.log4j.core.config.Configurator;
-import org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-import org.w3c.dom.DOMConfiguration;
-
-
 
 import com.crm.utility.TestUtil;
 import com.crm.utility.WebEventListener;
@@ -70,16 +57,24 @@ public class BaseClass {
 		
 		//String browserName=prop.getProperty("browser");
 		String browserName=browser_name;
+	
 		
 		if(browserName.contains("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			ChromeOptions option=new ChromeOptions();
+			option.addArguments("headless");
+			driver=new ChromeDriver(option);
 		}else if(browserName.contains("edge")) {
 			WebDriverManager.edgedriver().setup();
-			driver=new EdgeDriver();
+			EdgeOptions edgeOptions =new EdgeOptions();
+			  //edgeOptions.addArguments("headless");
+			driver=new EdgeDriver(edgeOptions);
 		}
 		else if(browserName.contains("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
+			//Set Firefox Headless mode as TRUE
+	        FirefoxOptions options = new FirefoxOptions();
+	        options.setHeadless(true);
 			driver=new FirefoxDriver();
 		}
 		
