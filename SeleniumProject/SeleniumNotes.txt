@@ -1,3 +1,15 @@
 ****Jenkins*****
 1. To Start Jenkins using .war file:hit the command "java -jar jenkins.war" in command prompt
 2.
+
+
+
+
+
+****Git***
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sahiljuneja29/Sahil12.git
+git push -u origin main

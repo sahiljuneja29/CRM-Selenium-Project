@@ -7,31 +7,6 @@
   <test thread-count="5" name="Free CRM Testcases(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.crm.testcases.TC_ContactsPageTest_004">
-        <methods>
-          <include name="validateCreateNewContactTest"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="loadConfig"/>
-        </methods>
-      </class> <!-- com.crm.testcases.TC_ContactsPageTest_004 -->
-      <class name="com.crm.testcases.TC_SignUpTest_003">
-        <methods>
-          <include name="setUp"/>
-          <include name="verifySignupPageTitleTest"/>
-          <include name="tearDown"/>
-          <include name="verifysignUpTest"/>
-          <include name="loadConfig"/>
-        </methods>
-      </class> <!-- com.crm.testcases.TC_SignUpTest_003 -->
-      <class name="com.crm.testcases.TC_LoginTest_001">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="verifyLoginPagteTitle"/>
-          <include name="loadConfig"/>
-        </methods>
-      </class> <!-- com.crm.testcases.TC_LoginTest_001 -->
       <class name="com.crm.testcases.TC_IndexPageTest_002">
         <methods>
           <include name="verifyTitle"/>

@@ -50,7 +50,7 @@ public class TC_LoginTest_001 extends BaseClass{
 		loginpage=indexpage.clickLogin();
 		String actualtitle=loginpage.getLoginPageTitle();
 		System.out.println(actualtitle);
-		Assert.assertEquals("LoginPage title not matched","Cogmento CRM",actualtitle);
+		Assert.assertEquals("LoginPage title not matched","Free CRM",actualtitle);
 		
 			
 	}
