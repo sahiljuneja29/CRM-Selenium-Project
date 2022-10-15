@@ -12,6 +12,11 @@ import com.crm.base.BaseClass;
 
 public class Action extends BaseClass{
 	
+	public Action(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void scrollByVisibilityOfElement(WebDriver driver, WebElement ele) {
 		
 		JavascriptExecutor js=(JavascriptExecutor)driver;

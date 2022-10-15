@@ -11,22 +11,12 @@ import org.testng.log4testng.Logger;
 import com.crm.base.BaseClass;
 import com.crm.pageobjects.IndexPage;
 
-public class TC_IndexPageTest_002 extends BaseClass{
+public class TC_IndexPageTest_002 extends BaseTest{
 	
 	
 	IndexPage indexpage;
 	Logger logger=Logger.getLogger(TC_IndexPageTest_002.class);
-	
-	@Parameters("browser")
-	@BeforeClass
-	public void setUp(String browser) {
-		launchApp(browser);
-	}
-	
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-	}
+
 	 
 	@Test(priority=1)
 	public void verifyLogo() {
@@ -41,9 +31,9 @@ public class TC_IndexPageTest_002 extends BaseClass{
 	@Test(priority=2)
 	public void verifyTitle() {
 		
-		String title=indexpage.getCrmTitle();
+		String title=indexpage.getPageTitle();
 		logger.info("Checking title of page:");
-		Assert.assertEquals(title,"Free CRM software for customer relationship management India","Indexpage title not matched");
+		Assert.assertEquals(title,"Free CRM software for any business with sales, support and customer relationship management","Indexpage title not matched");
 		
 	
 	}

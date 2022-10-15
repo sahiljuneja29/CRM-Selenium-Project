@@ -12,6 +12,11 @@ import com.crm.base.BaseClass;
 
 public class WebEventListener extends BaseClass implements WebDriverEventListener{
 
+	public WebEventListener(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
 	public void beforeAlertAccept(WebDriver driver) {
 		// TODO Auto-generated method stub
 		

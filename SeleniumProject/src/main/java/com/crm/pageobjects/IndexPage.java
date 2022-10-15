@@ -10,57 +10,61 @@ import com.src.ActionDriver.Action;
 public class IndexPage extends BaseClass{
 	
 	@FindBy(linkText = "Login")
-	WebElement LoginButton;
+	private WebElement LoginButton;
 	
 	@FindBy(linkText = "Sign Up")
-	WebElement SignUpButton;
+	private WebElement SignUpButton;
 	
 	@FindBy(linkText = "Contact Us")
-	WebElement ContactUsButton;
+	private WebElement ContactUsButton;
 	
 	@FindBy(linkText = "Pricing")
-	WebElement PricingButton;
+	private WebElement PricingButton;
 	
 	@FindBy(linkText = "Features")
-	WebElement FeaturesButton;
+	private WebElement FeaturesButton;
 	
 	
 	@FindBy(xpath = "//img[@class='img-responsive' and @alt='free crm logo']")
-	WebElement crmLogo;
+	private WebElement crmLogo;
 	
 	//Initialize the page objects
 	public IndexPage() {
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
 	public LoginPage clickLogin() {
-		Action.click(driver, LoginButton);
+		LoginButton.click();
+		//Action.click(driver, LoginButton);
 		return new LoginPage();
 	}
 	
 	public SignUpPage clickSignUp() {
-		Action.click(driver, SignUpButton);
+		//Action.click(driver, SignUpButton);
+		SignUpButton.click();
 		return new SignUpPage();
 	}
 	
 
 	public PricingPage clickPricing() {
-		Action.click(driver, PricingButton);
+		//Action.click(driver, PricingButton);
+		PricingButton.click();
 		return new PricingPage();
 	}
 	
 	public FeaturesPage clickFeatures() {
-		Action.click(driver, FeaturesButton);
+		//Action.click(driver, FeaturesButton);
+		FeaturesButton.click();
 		return new FeaturesPage();
 	}
 	
 	public boolean validateLogo() {
-		return Action.isDisplayed(driver, crmLogo);
+		return crmLogo.isDisplayed();
+		//return Action.isDisplayed(driver, crmLogo);
 	}
 	
-	public String getCrmTitle() {
-		return driver.getTitle();
-	}
+
 	
 
 }

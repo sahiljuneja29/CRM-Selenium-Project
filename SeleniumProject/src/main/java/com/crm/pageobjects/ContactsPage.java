@@ -2,17 +2,12 @@
 
 package com.crm.pageobjects;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.DataProvider;
 
 import com.crm.base.BaseClass;
-import com.crm.utility.TestUtil;
 import com.src.ActionDriver.Action;
 
 public class ContactsPage extends BaseClass {
@@ -43,6 +38,7 @@ public class ContactsPage extends BaseClass {
 
 	
 	public ContactsPage() {
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -57,7 +53,7 @@ public class ContactsPage extends BaseClass {
 	
 	
 	
-	public void createNewContact(String fname,String lname,String email,String category) {
+	public void createNewContact(String fname,String lname,String email,String category,String status) {
 		
 		
 		firstName.sendKeys(fname);
@@ -65,15 +61,12 @@ public class ContactsPage extends BaseClass {
 		email_address.sendKeys(email);
 		category_dropdown.click();
 		selectCategory(category);
+		
 		//select_lead.click();
 		savebutton.click();
 		driver.navigate().refresh();
 		
 		
-		
-//		Select select=new Select(driver.findElement(By.name("category")));
-//		select.selectByVisibleText(category);
-//		
 	}
 	
 	

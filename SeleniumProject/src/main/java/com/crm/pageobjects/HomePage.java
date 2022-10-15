@@ -12,15 +12,16 @@ import com.src.ActionDriver.Action;
 public class HomePage extends BaseClass {
 	
 	@FindBy(xpath = "//div[@class='header item']")
-	WebElement homePageLogo;
+	private WebElement homePageLogo;
 	
 	@FindBy(xpath = "//*[text()='Sahil Juneja']")
-	WebElement userName;
+	private WebElement userName;
 	
 	@FindBy(xpath = "//i[@class='users icon']")
-	WebElement contactButton;
+	private WebElement contactButton;
 	
 	public HomePage() {
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	

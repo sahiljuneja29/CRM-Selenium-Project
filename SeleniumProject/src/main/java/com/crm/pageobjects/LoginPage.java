@@ -14,30 +14,49 @@ public class LoginPage extends BaseClass{
 
 	@FindBy(xpath = "//input[@type='text' and @name='email']")
 	@CacheLookup
-	WebElement emailAddress;
+	private WebElement emailAddress;
 	
 	@FindBy(xpath = "//input[@type='password' and @name='password']")
-	WebElement password;
+	private WebElement password;
 	
 	@FindBy(xpath = "//div[text()='Login']")
-	WebElement LoginButton;
+	private WebElement LoginButton;
+	
+
+	@FindBy(xpath = "//a[text()='Forgot your password?']")
+	private WebElement ForgotPassword;
+
+	@FindBy(xpath = "//a[text()='Sign Up']")
+	private WebElement signup;
+	
+	@FindBy(xpath = "//a[text()='Classic CRM']")
+	private WebElement classicCRM;
+	
 	
 	public LoginPage() {
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
 	public HomePage Login(String uname, String pwd) {
 	
-		Action.sendKeys(emailAddress, uname);
-		Action.sendKeys(password, pwd);
-		Action.click(driver, LoginButton);
+		//Action.sendKeys(emailAddress, uname);
+		//Action.sendKeys(password, pwd);
+		//Action.click(driver, LoginButton);
+		emailAddress.sendKeys(uname);
+		password.sendKeys(pwd);
+		LoginButton.click();
 		
 		return new HomePage();
 		
 	}
 	
-	public String getLoginPageTitle() {
-		return driver.getTitle();
+	
+	public void forgotPassword() {
+		ForgotPassword.click();
+		//Action.click(driver, ForgotPassword);
+		
+		
 	}
 	
 

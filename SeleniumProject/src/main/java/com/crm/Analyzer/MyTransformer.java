@@ -10,7 +10,7 @@ import com.google.errorprone.annotations.OverridingMethodsMustInvokeSuper;
 
 public class MyTransformer implements IAnnotationTransformer{
 	
-	
+	//this class is created to implement the retry logic
 	public void transform( ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
 		
 		annotation.setRetryAnalyzer(RetryAnalyzer.class);

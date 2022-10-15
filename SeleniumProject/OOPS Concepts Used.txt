@@ -1,0 +1,10 @@
+OOPS concepts used:
+1. Inheritance
+2. Polymorphism
+2.1 Method Overloading
+2.2 Method Overriding
+3. Encapsulation private/public
+4. Abstraction
+5. Java Generics
+6. Interface
+7. Exception Handling

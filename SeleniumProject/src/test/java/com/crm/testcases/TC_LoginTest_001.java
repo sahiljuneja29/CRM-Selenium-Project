@@ -13,23 +13,23 @@ import com.crm.pageobjects.LoginPage;
 
 import junit.framework.Assert;
 
-public class TC_LoginTest_001 extends BaseClass{
+public class TC_LoginTest_001 extends BaseTest{
 	
 	IndexPage indexpage;
 	LoginPage loginpage;
 	HomePage homepage;
 	
-	
-	@Parameters("browser")
-	@BeforeClass
-	public void setUp(String browser) {
-		launchApp(browser);
-	}
-	
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-	}
+//	
+//	@Parameters("browser")
+//	@BeforeClass
+//	public void setUp(String browser) {
+//		launchApp(browser);
+//	}
+//	
+//	@AfterClass
+//	public void tearDown() {
+//		driver.quit();
+//	}
 	
 	@Test(priority=2)
 	public void verifyLogin() throws InterruptedException {
@@ -48,9 +48,9 @@ public class TC_LoginTest_001 extends BaseClass{
 		Thread.sleep(3000);
 		indexpage=new IndexPage();
 		loginpage=indexpage.clickLogin();
-		String actualtitle=loginpage.getLoginPageTitle();
+		String actualtitle=loginpage.getPageTitle();
 		System.out.println(actualtitle);
-		Assert.assertEquals("LoginPage title not matched","Free CRM",actualtitle);
+		Assert.assertEquals("LoginPage title not matched","Cogmento CRM",actualtitle);
 		
 			
 	}

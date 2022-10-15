@@ -7,14 +7,14 @@
   <test thread-count="5" name="Free CRM Testcases(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.crm.testcases.TC_IndexPageTest_002">
+      <class name="com.crm.testcases.TC_ContactsPageTest_004">
         <methods>
-          <include name="verifyTitle"/>
-          <include name="setUp"/>
+          <include name="validateCreateNewContactTest"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
           <include name="loadConfig"/>
         </methods>
-      </class> <!-- com.crm.testcases.TC_IndexPageTest_002 -->
+      </class> <!-- com.crm.testcases.TC_ContactsPageTest_004 -->
     </classes>
   </test> <!-- Free CRM Testcases(failed) -->
 </suite> <!-- Failed suite [Free CRM Application Test Automation] -->

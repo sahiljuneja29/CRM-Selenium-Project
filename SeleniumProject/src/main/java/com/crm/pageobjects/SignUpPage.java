@@ -30,6 +30,7 @@ public class SignUpPage extends BaseClass{
 	
 	//Initialize the page objects
 	public SignUpPage() {
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -45,9 +46,7 @@ public class SignUpPage extends BaseClass{
 		return new HomePage();	
 	}
 	
-	public String getSignUpPageTitle() {
-		return driver.getTitle();
-	}
+	
 	
 	
 	

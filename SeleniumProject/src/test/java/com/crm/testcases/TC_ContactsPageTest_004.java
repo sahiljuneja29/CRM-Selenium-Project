@@ -17,20 +17,19 @@ import com.crm.pageobjects.IndexPage;
 import com.crm.pageobjects.LoginPage;
 import com.crm.utility.TestUtil;
 
-public class TC_ContactsPageTest_004 extends BaseClass {
+public class TC_ContactsPageTest_004 extends BaseTest {
 	
 	IndexPage indexpage;
 	LoginPage loginpage;
 	HomePage homepage;
 	ContactsPage contactpage;
 	
-	Logger log=Logger.getLogger(Log.class.getName());
 	
-	@Parameters("browser")
-	@BeforeClass
-	public void setUp(String browser) throws InterruptedException {
-		log.info("*****************Launching the app****************");
-		launchApp( browser);
+	
+	
+	@Test(priority=1)
+	public void NavigateToContactPage() throws InterruptedException {
+		
 		Thread.sleep(3000);
 		indexpage=new IndexPage();
 		loginpage=indexpage.clickLogin();
@@ -39,10 +38,6 @@ public class TC_ContactsPageTest_004 extends BaseClass {
 		
 	}
 	
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-	}
 	
 	
 //	@Test(priority=1)
@@ -60,14 +55,14 @@ public class TC_ContactsPageTest_004 extends BaseClass {
 	}
 	
 	
-	@Test(priority=1,dataProvider = "getTestData")
-	public void validateCreateNewContactTest(String fname,String lname,String email,String category) throws InterruptedException {
+	@Test(priority=2,dataProvider = "getTestData")
+	public void validateCreateNewContactTest(String fname,String lname,String email,String category,String status) throws InterruptedException {
 		
 		log.info("**************Clicking the new contact button*************");
 		contactpage=homepage.clickContactButton();
 		contactpage.clickNewContactButton();
 		Thread.sleep(2000);
-		contactpage.createNewContact(fname,lname,email,category);
+		contactpage.createNewContact(fname,lname,email,category,status);
 		
 	}
 	

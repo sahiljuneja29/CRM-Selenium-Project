@@ -1,29 +1,12 @@
 package com.crm.base;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.testng.annotations.BeforeSuite;
-
-import com.crm.utility.TestUtil;
-import com.crm.utility.WebEventListener;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
-public class BaseClass {
+public class BaseClass extends Page{
 	
 	//What is Log?// Capturing info/activities at the time of program execution.
 	//Types of logs?
@@ -32,67 +15,65 @@ public class BaseClass {
 	//3. debug
 	//4. fatal
 	
-	public static Properties prop;
-	public static WebDriver driver;
-	public static EventFiringWebDriver edriver;
-	public static WebEventListener eventListener;
-	
-	@BeforeSuite
-	public void loadConfig() throws URISyntaxException {
-		
-		try {
-			prop=new Properties();
-			FileInputStream ip=new FileInputStream(
-					System.getProperty("user.dir")+"\\src\\test\\resources\\Configuration\\config.properties");
-			prop.load(ip);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
+	public BaseClass(WebDriver driver) {
+		super(driver);
 	}
 
-	public static void launchApp(String browser_name) {
-		
-		//String browserName=prop.getProperty("browser");
-		String browserName=browser_name;
 	
-		
-		if(browserName.contains("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions option=new ChromeOptions();
-			option.addArguments("headless");
-			driver=new ChromeDriver(option);
-		}else if(browserName.contains("edge")) {
-			WebDriverManager.edgedriver().setup();
-			EdgeOptions edgeOptions =new EdgeOptions();
-			  //edgeOptions.addArguments("headless");
-			driver=new EdgeDriver(edgeOptions);
+	@Override
+	public String getPageTitle() {
+		return driver.getTitle();
+	}
+
+	@Override
+	public String getPageHeader(By locator) {
+		return getElement(locator).getText();
+	}
+
+	@Override
+	public WebElement getElement(By locator) {
+		WebElement element= null;
+		try {
+		element=driver.findElement(locator);
+		return element;
 		}
-		else if(browserName.contains("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			//Set Firefox Headless mode as TRUE
-	        FirefoxOptions options = new FirefoxOptions();
-	        options.setHeadless(true);
-			driver=new FirefoxDriver();
+		catch(Exception e) {
+			System.out.println("Some error occured while creating element " +locator.toString());
+			e.printStackTrace();
+		}
+		return element;
+	}
+
+
+	@Override
+	public void waitForPageTitle(String title) {
+		try {
+			wait.until(ExpectedConditions.titleContains(title));
+		}
+		catch(Exception e) {
+			System.out.println("Some exception occured while waiting for the title " + title);
+			e.printStackTrace();
+		}
+	}
+
+
+	@Override
+	public String getPageURL() {
+		return driver.getCurrentUrl();
+	}
+
+
+	@Override
+	public void waitForElementPresent(By locator) {
+
+		try {
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		}
+		catch(Exception e) {
+			System.out.println("Some exception occured while waiting for the element " + locator.toString());
+			e.printStackTrace();
 		}
 		
-		
-		edriver=new EventFiringWebDriver(driver);
-		//Now create an object of EventListenerHandler to register it with EventFiringWebDriver
-		eventListener=new WebEventListener();
-		edriver.register(eventListener);
-		driver=edriver;
-		
-		
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		
-		
-		driver.get(prop.getProperty("url"));
 		
 	}
 	
