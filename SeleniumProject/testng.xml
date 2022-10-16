@@ -9,9 +9,9 @@
   <test thread-count="5" name="Free CRM Testcases">
   <parameter name="browser" value="chrome"></parameter>
   	<classes>
-  		<!-- <class name="com.crm.testcases.TC_IndexPageTest_002"></class>
+  		<class name="com.crm.testcases.TC_IndexPageTest_002"></class>
   		<class name="com.crm.testcases.TC_LoginTest_001"></class>
-  		<class name="com.crm.testcases.TC_SignUpTest_003"></class> -->
+  		<class name="com.crm.testcases.TC_SignUpTest_003"></class>
   		<class name="com.crm.testcases.TC_ContactsPageTest_004"></class>	
   	</classes>
   	
