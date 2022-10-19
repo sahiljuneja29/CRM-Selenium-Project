@@ -3,6 +3,7 @@ package ComplexTestScenarios;
 
 
 import org.testng.AssertJUnit;
+
 import java.awt.List;
 
 import java.io.File;
@@ -13,7 +14,8 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -132,19 +134,20 @@ public class JavascriptExecutor {
 		String LoginClassName = ename.getAttribute("name");
 		System.out.println(LoginClassName);
 		
+		
 		SoftAssert assertion=new SoftAssert();
 		String title=driver.getTitle();
 		AssertJUnit.assertEquals(title, "Register - PHPTRAVELS");
 		
 		//We can scroll down a page by using window.scrollBy() function.
-		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0,700)");
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+		//js.executeScript("window.scrollBy(0,700)");
 		
 		driver.findElement(By.xpath("//*[@id=\"Primary_Navbar-Contact_Us\"]/a")).click();
 		WebElement element=driver.findElement(By.xpath("//*[@id=\"main-body\"]/div/div/div[1]/form/div[6]/div/button"));
 		
 		//To scroll down to a particular element on a web page, we can use the function scrollIntoView()
-		js.executeScript("arguments[0].scrollIntoView();", element);
+		//js.executeScript("arguments[0].scrollIntoView();", element);
 		
 		//js.executeScript("document.getElementById('text-8').scrollIntoView(true);");
 		
