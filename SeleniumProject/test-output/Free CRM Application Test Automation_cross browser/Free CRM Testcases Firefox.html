@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Free CRM Testcases Firefox</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/6</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 05 23:43:23 IST 2022</td>
+<td>Started on:</td><td>Tue Dec 20 14:18:40 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>137 seconds (137626 ms)</td>
+<tr><td>Total time:</td><td>186 seconds (186757 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.crm.testcases.TC_IndexPageTest_002.setUp()'><b>setUp</b><br>Test class: com.crm.testcases.TC_IndexPageTest_002<br>Parameters: firefox</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: No connection could be made because the target machine actively refused it. (os error 10061)
+<td title='com.crm.testcases.TC_IndexPageTest_002.setUp()'><b>setUp</b><br>Test class: com.crm.testcases.TC_IndexPageTest_002<br>Parameters: edge</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
 	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
@@ -100,21 +123,43 @@ remote stacktrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at com.crm.base.BaseClass.launchApp(BaseClass.java:79)
-	at com.crm.testcases.TC_IndexPageTest_002.setUp(TC_IndexPageTest_002.java:30)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace300926946", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace300926946'><pre>org.openqa.selenium.TimeoutException: No connection could be made because the target machine actively refused it. (os error 10061)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1116412840", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1116412840'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -139,10 +184,9 @@ remote stacktrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at com.crm.base.BaseClass.launchApp(BaseClass.java:79)
-	at com.crm.testcases.TC_IndexPageTest_002.setUp(TC_IndexPageTest_002.java:30)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -165,8 +209,221 @@ remote stacktrace:
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>137</td>
-<td>com.crm.testcases.TC_IndexPageTest_002@4dbb42b7</td></tr>
+<td>64</td>
+<td>com.crm.testcases.TC_IndexPageTest_002@771a660</td></tr>
+<tr>
+<td title='com.crm.testcases.TC_LoginTest_001.setUp()'><b>setUp</b><br>Test class: com.crm.testcases.TC_LoginTest_001<br>Parameters: edge</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:8798/status] to be available after 20001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1366161803", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1366161803'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:8798/status] to be available after 20001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+</pre></div></td>
+<td>58</td>
+<td>com.crm.testcases.TC_LoginTest_001@2d52216b</td></tr>
+<tr>
+<td title='com.crm.testcases.TC_SignUpTest_003.setUp()'><b>setUp</b><br>Test class: com.crm.testcases.TC_SignUpTest_003<br>Parameters: edge</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1391327494", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1391327494'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>63</td>
+<td>com.crm.testcases.TC_SignUpTest_003@242b836</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -176,10 +433,20 @@ remote stacktrace:
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.crm.testcases.TC_LoginTest_001.tearDown()'><b>tearDown</b><br>Test class: com.crm.testcases.TC_LoginTest_001</td>
+<td></td>
+<td>-1671526307</td>
+<td>com.crm.testcases.TC_LoginTest_001@2d52216b</td></tr>
+<tr>
+<td title='com.crm.testcases.TC_SignUpTest_003.tearDown()'><b>tearDown</b><br>Test class: com.crm.testcases.TC_SignUpTest_003</td>
+<td></td>
+<td>-1671526307</td>
+<td>com.crm.testcases.TC_SignUpTest_003@242b836</td></tr>
+<tr>
 <td title='com.crm.testcases.TC_IndexPageTest_002.tearDown()'><b>tearDown</b><br>Test class: com.crm.testcases.TC_IndexPageTest_002</td>
 <td></td>
-<td>-1664993740</td>
-<td>com.crm.testcases.TC_IndexPageTest_002@4dbb42b7</td></tr>
+<td>-1671526307</td>
+<td>com.crm.testcases.TC_IndexPageTest_002@771a660</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -189,105 +456,35 @@ remote stacktrace:
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.crm.testcases.TC_IndexPageTest_002.verifyLogo()'><b>verifyLogo</b><br>Test class: com.crm.testcases.TC_IndexPageTest_002</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: No connection could be made because the target machine actively refused it. (os error 10061)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at com.crm.base.BaseClass.launchApp(BaseClass.java:79)
-	at com.crm.testcases.TC_IndexPageTest_002.setUp(TC_IndexPageTest_002.java:30)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace253344799", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace253344799'><pre>org.openqa.selenium.TimeoutException: No connection could be made because the target machine actively refused it. (os error 10061)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at com.crm.base.BaseClass.launchApp(BaseClass.java:79)
-	at com.crm.testcases.TC_IndexPageTest_002.setUp(TC_IndexPageTest_002.java:30)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>0</td>
-<td>com.crm.testcases.TC_IndexPageTest_002@4dbb42b7</td></tr>
-<tr>
 <td title='com.crm.testcases.TC_IndexPageTest_002.verifyTitle()'><b>verifyTitle</b><br>Test class: com.crm.testcases.TC_IndexPageTest_002</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: No connection could be made because the target machine actively refused it. (os error 10061)
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
 	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
@@ -307,21 +504,43 @@ remote stacktrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at com.crm.base.BaseClass.launchApp(BaseClass.java:79)
-	at com.crm.testcases.TC_IndexPageTest_002.setUp(TC_IndexPageTest_002.java:30)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1796277582", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1796277582'><pre>org.openqa.selenium.TimeoutException: No connection could be made because the target machine actively refused it. (os error 10061)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2038282615", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2038282615'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -346,10 +565,9 @@ remote stacktrace:
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at com.crm.base.BaseClass.launchApp(BaseClass.java:79)
-	at com.crm.testcases.TC_IndexPageTest_002.setUp(TC_IndexPageTest_002.java:30)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -373,7 +591,570 @@ remote stacktrace:
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
 <td>0</td>
-<td>com.crm.testcases.TC_IndexPageTest_002@4dbb42b7</td></tr>
+<td>com.crm.testcases.TC_IndexPageTest_002@771a660</td></tr>
+<tr>
+<td title='com.crm.testcases.TC_IndexPageTest_002.verifyLogo()'><b>verifyLogo</b><br>Test class: com.crm.testcases.TC_IndexPageTest_002</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace868832594", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace868832594'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.testcases.TC_IndexPageTest_002@771a660</td></tr>
+<tr>
+<td title='com.crm.testcases.TC_SignUpTest_003.verifySignupPageTitleTest()'><b>verifySignupPageTitleTest</b><br>Test class: com.crm.testcases.TC_SignUpTest_003</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace304696708", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace304696708'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.testcases.TC_SignUpTest_003@242b836</td></tr>
+<tr>
+<td title='com.crm.testcases.TC_LoginTest_001.verifyLogin()'><b>verifyLogin</b><br>Test class: com.crm.testcases.TC_LoginTest_001</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:8798/status] to be available after 20001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace602117614", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace602117614'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:8798/status] to be available after 20001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+</pre></div></td>
+<td>0</td>
+<td>com.crm.testcases.TC_LoginTest_001@2d52216b</td></tr>
+<tr>
+<td title='com.crm.testcases.TC_LoginTest_001.verifyLoginPagteTitle()'><b>verifyLoginPagteTitle</b><br>Test class: com.crm.testcases.TC_LoginTest_001</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:8798/status] to be available after 20001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1247665203", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1247665203'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:202)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:8798/status] to be available after 20001 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
+	... 29 more
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 30 more
+</pre></div></td>
+<td>0</td>
+<td>com.crm.testcases.TC_LoginTest_001@2d52216b</td></tr>
+<tr>
+<td title='com.crm.testcases.TC_SignUpTest_003.verifysignUpTest()'><b>verifysignUpTest</b><br>Test class: com.crm.testcases.TC_SignUpTest_003</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1381332346", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1381332346'><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HP1&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: EdgeDriver
+remote stacktrace: Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF6D72491D2+14306]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D0992+842866]
+	(No symbol) [0x00007FF6D6E81D90]
+	(No symbol) [0x00007FF6D6EB3295]
+	(No symbol) [0x00007FF6D6EAE67B]
+	(No symbol) [0x00007FF6D6EA9DCF]
+	(No symbol) [0x00007FF6D6EEE027]
+	(No symbol) [0x00007FF6D6EED3BA]
+	(No symbol) [0x00007FF6D6EE5B03]
+	(No symbol) [0x00007FF6D6EB73B8]
+	(No symbol) [0x00007FF6D6EB638E]
+	(No symbol) [0x00007FF6D6EB7AE4]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D711FE18+119032]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D710D4D6+42934]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71106EC+55756]
+	(No symbol) [0x00007FF6D6F87923]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71D844A+874282]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD544+895012]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71DD69C+895356]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF6D71E67BE+932510]
+	BaseThreadInitThunk [0x00007FFBE7AD7C24+20]
+	RtlUserThreadStart [0x00007FFBE91ED4D1+33]
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:141)
+	at org.openqa.selenium.edge.EdgeDriver.&lt;init&gt;(EdgeDriver.java:130)
+	at com.crm.testcases.BaseTest.setUp(BaseTest.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>com.crm.testcases.TC_SignUpTest_003@242b836</td></tr>
 </table><p>
 </body>
 </html>
