@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Alert1 {
 	
 	
@@ -21,9 +23,10 @@ public class Alert1 {
 		@Test()
 		public void Test1()
 		{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sahil.juneja01\\Desktop\\Study Material\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sahil.juneja01\\Desktop\\Study Material\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
@@ -32,6 +35,7 @@ public class Alert1 {
 		WebElement element = driver.findElement(By.id("promtButton"));
 		
 		((JavascriptExecutor)driver).executeScript("arguments[0].click()",element);
+		
 		Alert a1=driver.switchTo().alert();
 		 System.out.println(a1.getText());
 		
@@ -41,7 +45,7 @@ public class Alert1 {
 		
 		 try {
 	            driver.findElement(By.id("timerAlertButton")).click();
-	            WebDriverWait wait = new WebDriverWait(driver,4);
+	            WebDriverWait wait = new WebDriverWait(driver,6);
 	            wait.until(ExpectedConditions.alertIsPresent());
 	            Alert simpleAlert = driver.switchTo().alert();
 	            simpleAlert.accept();

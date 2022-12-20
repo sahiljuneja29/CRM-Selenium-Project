@@ -39,7 +39,7 @@ public class TC_SignUpTest_003 extends BaseTest {
 		indexpage=new IndexPage();
 		signup=indexpage.clickSignUp();
 		String title=signup.getPageTitle();
-		Assert.assertEquals("SignUpPage title not matched","Free CRM",title);
+		Assert.assertEquals("SignUpPage title not matched","Cogmento CRM",title);
 	
 	}
 	

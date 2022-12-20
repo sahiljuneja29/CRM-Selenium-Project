@@ -20,7 +20,7 @@ public  class TestUtil extends BaseClass{
 	
 	public TestUtil(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static long PAGE_LOAD_TIMEOUT=20;
@@ -31,12 +31,18 @@ public  class TestUtil extends BaseClass{
 			+ "\\src\\test\\resources\\TestData\\contacts.xlsx";
 	
 	
+	
+	public void switchToFrame() {
+		driver.switchTo().frame("mainpanel");
+	}
+	
+	
 	public  static Object[][] readExcel() throws IOException    {
 		
 		//Create an object of FileInputStream class to read excel file
 		File file=new File(TestDataSheetPath);
 		FileInputStream fis=new FileInputStream(file);
-		XSSFWorkbook wb=new XSSFWorkbook(fis);     			//creating Workbook instance that refers to .xlsx file 
+		XSSFWorkbook wb=new XSSFWorkbook(fis);     		//creating Workbook instance that refers to .xlsx file 
 		XSSFSheet sheet=wb.getSheet("Sheet1");			  //creating a Sheet object to retrieve object 
 		
 		int lastrownum=sheet.getLastRowNum();
@@ -46,11 +52,12 @@ public  class TestUtil extends BaseClass{
 		for(int i=0;i<lastrownum;i++) {
 			for(int j=0;j<sheet.getRow(0).getLastCellNum();j++) {
 				data[i][j]=sheet.getRow(i+1).getCell(j).toString();
+				System.out.println(data[i][j]);
 			}
 		}
+		
 		//wb.close();
 		return data;
-		
 		
 		
 	}
@@ -62,9 +69,9 @@ public  class TestUtil extends BaseClass{
 	}
 	
 	
-	public static void selectByValue(WebElement element,String value) {
+	public static void selectByIndex(WebElement element,Integer index) {
 		Select select =new Select(element);
-		select.selectByValue(value);
+		select.selectByIndex(index);
 	}
 	
 	public static void selectByVisibleText(WebElement element,String text) {

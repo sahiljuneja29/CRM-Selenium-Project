@@ -1,6 +1,7 @@
 package com.crm.testcases;
 
 import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -21,7 +22,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
-import com.aventstack.extentreports.model.Log;
+//import com.aventstack.extentreports.model.Log;
 import com.crm.base.BaseClass;
 import com.crm.base.Page;
 import com.crm.utility.TestUtil;
@@ -36,7 +37,7 @@ public class BaseTest {
 	public static EventFiringWebDriver edriver;
 	public static WebEventListener eventListener;
 	public static Page page;
-	Logger log=Logger.getLogger(Log.class.getName());
+	//Logger log=Logger.getLogger(Log.class.getName());
 	
 	@BeforeSuite
 	public void loadConfig() throws URISyntaxException {
@@ -64,6 +65,7 @@ public class BaseTest {
 		
 		if(browserName.contains("chrome")) {
 			WebDriverManager.chromedriver().setup();
+			// Use chromeoptions to execute the test in headless mode
 //			ChromeOptions option=new ChromeOptions();
 //			option.addArguments("headless");
 //			driver=new ChromeDriver(option);
@@ -95,7 +97,7 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		
-		log.info("*****************Launching the app****************");
+		//log.info("*****************Launching the app****************");
 		
 		driver.get(prop.getProperty("url"));
 		

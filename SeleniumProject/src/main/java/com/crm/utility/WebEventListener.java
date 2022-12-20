@@ -70,7 +70,7 @@ public class WebEventListener extends BaseClass implements WebDriverEventListene
 	}
 
 	public void beforeNavigateRefresh(WebDriver driver) {
-		System.out.println("Page is about to get refreshed:");
+		System.out.println("Page is about to get refreshed ");
 		
 	}
 
@@ -122,12 +122,13 @@ public class WebEventListener extends BaseClass implements WebDriverEventListene
 	}
 
 	public void beforeSwitchToWindow(String windowName, WebDriver driver) {
+		System.out.println("Before switching to window :" +windowName);
 		// TODO Auto-generated method stub
 		
 	}
 
 	public void afterSwitchToWindow(String windowName, WebDriver driver) {
-		// TODO Auto-generated method stub
+		System.out.println("After switching to window :" +windowName);
 		
 	}
 

@@ -12,6 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Frames {
 	
 
@@ -20,10 +22,10 @@ public class Frames {
 	@Test()
 	public void testOnChromeWithBrowserStackSignUp()
 	{
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\sahil.juneja01\\Desktop\\Study Material\\chromedriver.exe");
+	//System.setProperty("webdriver.chrome.driver", "C:\\Users\\sahil.juneja01\\Desktop\\Study Material\\chromedriver.exe");
+	WebDriverManager.chromedriver().setup();
 	driver=new ChromeDriver();
-//		System.setProperty("webdriver.edge.driver", "D:\\chromedriver\\msedgedriver.exe");
-//		driver=new EdgeDriver();
+
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.get(url);
 	driver.manage().window().maximize();

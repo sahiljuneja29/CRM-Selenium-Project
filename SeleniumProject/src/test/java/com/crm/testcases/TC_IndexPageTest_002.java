@@ -27,6 +27,7 @@ public class TC_IndexPageTest_002 extends BaseTest{
 		Assert.assertTrue(result);
 	
 	}
+	
 	//retryAnalyzer = com.crm.Analyzer.RetryAnalyzer.class
 	@Test(priority=2)
 	public void verifyTitle() {

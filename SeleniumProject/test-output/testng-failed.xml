@@ -1,20 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Free CRM Application Test Automation]" guice-stage="DEVELOPMENT">
+<suite parallel="tests" name="Failed suite [Free CRM Application Test Automation_cross browser]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.crm.Analyzer.MyTransformer"/>
   </listeners>
-  <test thread-count="5" name="Free CRM Testcases(failed)">
-    <parameter name="browser" value="chrome"/>
+  <test thread-count="5" parallel="tests" name="Free CRM Testcases Firefox(failed)">
+    <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.crm.testcases.TC_ContactsPageTest_004">
+      <class name="com.crm.testcases.TC_SignUpTest_003">
         <methods>
-          <include name="validateCreateNewContactTest"/>
+          <include name="tearDown"/>
+          <include name="verifySignupPageTitleTest"/>
+          <include name="verifysignUpTest"/>
+          <include name="setUp"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.crm.testcases.TC_SignUpTest_003 -->
+      <class name="com.crm.testcases.TC_IndexPageTest_002">
+        <methods>
+          <include name="verifyTitle"/>
+          <include name="verifyLogo"/>
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="loadConfig"/>
         </methods>
-      </class> <!-- com.crm.testcases.TC_ContactsPageTest_004 -->
+      </class> <!-- com.crm.testcases.TC_IndexPageTest_002 -->
+      <class name="com.crm.testcases.TC_LoginTest_001">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyLoginPagteTitle"/>
+          <include name="verifyLogin"/>
+          <include name="setUp"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.crm.testcases.TC_LoginTest_001 -->
     </classes>
-  </test> <!-- Free CRM Testcases(failed) -->
-</suite> <!-- Failed suite [Free CRM Application Test Automation] -->
+  </test> <!-- Free CRM Testcases Firefox(failed) -->
+  <test thread-count="5" parallel="tests" name="Free CRM Testcases Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.crm.testcases.TC_SignUpTest_003">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifysignUpTest"/>
+          <include name="setUp"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.crm.testcases.TC_SignUpTest_003 -->
+      <class name="com.crm.testcases.TC_IndexPageTest_002">
+        <methods>
+          <include name="verifyTitle"/>
+          <include name="verifyLogo"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.crm.testcases.TC_IndexPageTest_002 -->
+      <class name="com.crm.testcases.TC_LoginTest_001">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyLogin"/>
+          <include name="setUp"/>
+          <include name="loadConfig"/>
+        </methods>
+      </class> <!-- com.crm.testcases.TC_LoginTest_001 -->
+    </classes>
+  </test> <!-- Free CRM Testcases Chrome(failed) -->
+</suite> <!-- Failed suite [Free CRM Application Test Automation_cross browser] -->

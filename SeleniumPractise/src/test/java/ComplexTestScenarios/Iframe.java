@@ -36,7 +36,7 @@ public class Iframe {
 	
 	try {
 	driver.switchTo().frame(0);     //switch to frame using id
-	//driver.switchTo().frame("courses-iframe");     ////switch to frame using name attribute
+	driver.switchTo().frame("courses-iframe");     ////switch to frame using name attribute
 	}
 	catch(NoSuchFrameException e) {
 		System.out.println("unable to locate frame with name" + e.getStackTrace() );
