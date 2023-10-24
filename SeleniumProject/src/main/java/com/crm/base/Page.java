@@ -1,5 +1,7 @@
 package com.crm.base;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +14,7 @@ public abstract class Page {
 	
 	public  Page(WebDriver driver) {
 		Page.driver=driver;
-		Page.wait=new WebDriverWait(Page.driver, 15);
+		Page.wait=new WebDriverWait(Page.driver, Duration.ofSeconds(5));
 	}
 	
 	//abstract methods

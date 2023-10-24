@@ -1,5 +1,7 @@
 package com.src.ActionDriver;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -83,7 +85,7 @@ public class Action extends BaseClass{
 	public void waitforanelement(WebElement element)
     {
 		
-        WebDriverWait wait = new WebDriverWait(driver,20);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
          wait.until(ExpectedConditions.presenceOfElementLocated((By) element)); //you can use any other By like id, cssselector, name, linktext etc
     }
 
